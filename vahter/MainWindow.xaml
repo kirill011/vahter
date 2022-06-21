@@ -1,0 +1,27 @@
+﻿<Window x:Class="vahter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:vahter"
+        mc:Ignorable="d"
+        Title="Vahter" Height="489" Width="1084" Loaded="Window_Loaded">
+    <Grid Margin="0,0,10,-6">
+        <ListBox x:Name="SotrudnikiList" HorizontalAlignment="Left" Height="364" Margin="12,81,0,0" VerticalAlignment="Top" Width="324" d:ItemsSource="{d:SampleData ItemCount=5}" SelectedIndex="0"/>
+        <Button x:Name="saveButton" Content="Сохранить" HorizontalAlignment="Left" Height="26" Margin="12,7,0,0" VerticalAlignment="Top" Width="78" Click="saveButton_Click"/>
+        <Button x:Name="timeInButton" Content="Отметить прибытие" HorizontalAlignment="Left" Height="26" Margin="369,196,0,0" VerticalAlignment="Top" Width="136" Click="timeInButton_Click"/>
+        <Button x:Name="timeOutButton" Content="Отметить отбытие" HorizontalAlignment="Left" Height="26" Margin="510,196,0,0" VerticalAlignment="Top" Width="136" Click="timeOutButton_Click"/>
+        <Button x:Name="loadButton" Content="Загрузить" HorizontalAlignment="Left" Height="26" Margin="95,7,0,0" VerticalAlignment="Top" Width="78" Click="loadButton_Click"/>
+        <DatePicker x:Name="datePicker1" HorizontalAlignment="Left" Height="31" Margin="422,160,0,0" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.515,1.203"/>
+        <Button x:Name="addEmployeeButton" Content="Добавить сотрудника" HorizontalAlignment="Left" Height="26" Margin="341,50,0,0" VerticalAlignment="Top" Width="136" Click="addEmployeeButton_Click"/>
+        <TextBox x:Name="addEmployee" HorizontalAlignment="Left" Height="30" Margin="12,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" GotFocus="addEmployee_GotFocus" Text="Введите имя сотрудника"/>
+        <Button x:Name="deleteButton" Content="Удалить" HorizontalAlignment="Left" Height="26" Margin="178,7,0,0" VerticalAlignment="Top" Width="78" Click="deleteButton_Click"/>
+        <Button x:Name="clearButton" Content="Отчистить" HorizontalAlignment="Left" Height="26" Margin="261,7,0,0" VerticalAlignment="Top" Width="78" Click="clearButton_Click"/>
+        <ListBox x:Name="timeInList" HorizontalAlignment="Left" Height="384" Margin="678,64,0,0" VerticalAlignment="Top" Width="192" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="timeOutList" HorizontalAlignment="Left" Height="384" Margin="875,64,0,0" VerticalAlignment="Top" Width="192" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button x:Name="selectButton" Content="Выбрать сотрудника" HorizontalAlignment="Left" Height="25" Margin="341,81,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.679,1.153" Click="selectButton_Click"/>
+        <Label Content="Пришёл" HorizontalAlignment="Left" Height="30" Margin="678,34,0,0" VerticalAlignment="Top" Width="192"/>
+        <Label Content="Ушёл" HorizontalAlignment="Left" Height="30" Margin="875,34,0,0" VerticalAlignment="Top" Width="192"/>
+
+    </Grid>
+</Window>
